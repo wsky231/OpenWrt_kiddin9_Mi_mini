@@ -1,0 +1,8 @@
+version: "1"
+rules:
+  - base: master                # 你的仓库里要同步的分支
+    upstream: kiddin9:master    # 上游的 仓库名:分支名
+    mergeMethod: merge          # 自动用 merge 的方式合并，而不是硬重置
+    mergeUnstable: true         # 在 GitHub 标记状态不完全“干净”的时候也尝试合并
+label: ":arrow_heading_down: pull"   # （可选）给机器人开的 PR 打这个标签
+conflictLabel: "merge-conflict"      # （可选）有冲突时给 PR 打这个标签
